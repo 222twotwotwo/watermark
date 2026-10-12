@@ -1,0 +1,17 @@
+{
+  "name": "watermark-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4173",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4174",
+    "test": "node --test tests/watermark.test.js",
+    "test:browser": "node tests/browser.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "vite": "^7.1.9"
+  }
+}

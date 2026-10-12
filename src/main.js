@@ -325,7 +325,7 @@ async function upload(file) {
 }
 $('#upload').addEventListener('click', () => $('#file').click());
 $('#file').addEventListener('change', (event) => { upload(event.target.files[0]); event.target.value = ''; });
-$('#demo').addEventListener('click', () => loadImage('/demo.jpg', '示例图片 · 纯绿背景', true));
+$('#demo').addEventListener('click', () => loadImage(`${import.meta.env.BASE_URL}demo.jpg`, '示例图片 · 纯绿背景', true));
 
 let dragDepth = 0;
 document.addEventListener('dragenter', (event) => {
@@ -406,4 +406,4 @@ for (const button of document.querySelectorAll('[data-layer]')) button.addEventL
   finally { button.disabled = false; }
 });
 
-loadImage('/demo.jpg', '示例图片 · 纯绿背景', true);
+loadImage(`${import.meta.env.BASE_URL}demo.jpg`, '示例图片 · 纯绿背景', true);

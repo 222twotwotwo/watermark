@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1 --port 4174",
     "test": "node --test tests/watermark.test.js",
-    "test:browser": "node tests/browser.mjs"
+    "test:browser": "node tests/browser.mjs",
+    "test:pages": "node tests/pages.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.0",

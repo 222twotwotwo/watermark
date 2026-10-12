@@ -11,7 +11,15 @@ npm install
 npm run dev
 ```
 
-打开 http://127.0.0.1:4173（端口占用时以终端显示的地址为准）。生产构建使用 `npm run build`，将 `dist` 文件夹部署到静态站点即可。`npm run preview` 可在 4174 端口本地预览构建结果。
+打开 http://127.0.0.1:4173（端口占用时以终端显示的地址为准）。生产构建使用 `npm run build`，资源路径前缀为 `/watermark/`。运行 `npm run preview` 后，可在 http://127.0.0.1:4174/watermark/ 预览构建结果。
+
+## GitHub Pages
+
+线上地址：https://222twotwotwo.github.io/watermark/
+
+仓库 Pages 的部署来源使用 GitHub Actions。推送 `main` 后，`.github/workflows/pages.yml` 自动安装依赖、测试、构建并发布 `dist`；不要直接发布包含 Vite 源码的仓库根目录。
+
+本地启动构建预览后运行 `npm run test:pages` 验证子路径下的脚本、样式、字体、示例图及导出。设置 `PAGES_TEST_URL` 可对线上地址运行相同检查。
 
 ## 复刻方式
 
